@@ -1,0 +1,1 @@
+# Scrapyd - Bitnami Version
