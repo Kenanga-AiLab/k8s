@@ -1,11 +1,9 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: postgres-pvc
-  namespace: development
+  name: pgadmin-pvc
   labels:
-    app: postgresql
-    release: pgsql
+    app: pgadmin
   finalizers:
     - kubernetes.io/pvc-protection
 spec:
@@ -13,7 +11,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 10Gi
-  volumeName: postgres-pv
-  storageClassName: local-storage
+      storage: 5Gi
+  volumeName: pgadmin-pv
+  # storageClassName: microk8s-hostpath
   volumeMode: Filesystem

@@ -1,0 +1,23 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: postgres-pv
+  labels:
+    app: postgres
+    type: local
+  annotations:
+    hostPathProvisionerIdentity: ubuntu
+    pv.kubernetes.io/provisioned-by: microk8s.io/hostpath
+  finalizers:
+    - kubernetes.io/pv-protection
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /mnt/k8s/postgres/data
+    # type: DirectoryOrCreate
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: microk8s-hostpath
+  volumeMode: Filesystem
