@@ -302,7 +302,7 @@ persistence:
   ## If defined, PVC must be created manually before volume will be bound
   ## The value is evaluated as a template, so, for example, the name can depend on .Release or .Chart
   ##
-  existingClaim: postgres-pvc
+  # existingClaim: postgres-pvc
 
   ## The path the volume will be mounted at, useful when using different
   ## PostgreSQL images.
@@ -314,7 +314,7 @@ persistence:
   ##
   subPath: ""
 
-  storageClass: "local-storage"
+  # storageClass: "local-storage"
   accessModes:
     - ReadWriteOnce
   size: 10Gi
@@ -437,7 +437,7 @@ commonAnnotations: {}
 networkPolicy:
   ## Enable creation of NetworkPolicy resources. Only Ingress traffic is filtered for now.
   ##
-  enabled: false
+  enabled: true
 
   ## The Policy model to apply. When set to false, only pods with the correct
   ## client label will have network access to the port PostgreSQL is listening
