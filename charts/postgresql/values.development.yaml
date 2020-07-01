@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Global Docker image parameters
 ## Please, note that this will override the image parameters, including dependencies, configured to use the global value
 ## Current available global Docker image parameters: imageRegistry and imagePullSecrets
@@ -569,3 +570,5 @@ metrics:
     timeoutSeconds: 5
     failureThreshold: 6
     successThreshold: 1
+=======
+>>>>>>> 66dc77c811f79fba6f37a78f3bb44067fb5495b3
