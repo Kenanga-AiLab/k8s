@@ -42,6 +42,11 @@ subjects:
   namespace: kubernetes-dashboard
 ```
 
+## Access Dashboard
+```
+kubectl proxy
+```
+
 ## Getting a Bearer Token
 
 Now we need to find token we can use to log in. Execute following command:
