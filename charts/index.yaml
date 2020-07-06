@@ -3,7 +3,7 @@ entries:
   airflow:
   - apiVersion: v2
     appVersion: 1.10.10
-    created: "2020-07-06T21:11:24.2643954+08:00"
+    created: "2020-07-06T21:33:06.5959665+08:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -27,6 +27,6 @@ entries:
     - https://airflow.apache.org/
     type: application
     urls:
-    - https://mattiaperi.github.io/helm-chart/airflow/airflow-0.1.0.tgz
+    - https://kenanga-ailab.github.io/k8s/charts/airflow/airflow-0.1.0.tgz
     version: 0.1.0
-generated: "2020-07-06T21:11:24.2579304+08:00"
+generated: "2020-07-06T21:33:06.589266+08:00"
