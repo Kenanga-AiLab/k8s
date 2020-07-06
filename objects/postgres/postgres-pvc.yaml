@@ -4,8 +4,6 @@ metadata:
   name: postgres-pvc
   labels:
     app: postgres
-  finalizers:
-    - kubernetes.io/pvc-protection
 spec:
   accessModes:
     - ReadWriteOnce
@@ -13,5 +11,4 @@ spec:
     requests:
       storage: 5Gi
   volumeName: postgres-pv
-  storageClassName: microk8s-hostpath
   volumeMode: Filesystem

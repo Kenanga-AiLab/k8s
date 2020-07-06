@@ -5,11 +5,6 @@ metadata:
   labels:
     app: pgadmin
     type: local
-  annotations:
-    hostPathProvisionerIdentity: ubuntu
-    # pv.kubernetes.io/provisioned-by: microk8s.io/hostpath
-  finalizers:
-    - kubernetes.io/pv-protection
 spec:
   capacity:
     storage: 5Gi
@@ -19,5 +14,4 @@ spec:
     path: /mnt/k8s/pgadmin
     type: DirectoryOrCreate
   persistentVolumeReclaimPolicy: Retain
-  # storageClassName: microk8s-hostpath
   volumeMode: Filesystem

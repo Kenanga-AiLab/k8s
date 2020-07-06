@@ -4,8 +4,6 @@ metadata:
   name: pgadmin-pvc
   labels:
     app: pgadmin
-  finalizers:
-    - kubernetes.io/pvc-protection
 spec:
   accessModes:
     - ReadWriteOnce
@@ -13,5 +11,4 @@ spec:
     requests:
       storage: 5Gi
   volumeName: pgadmin-pv
-  # storageClassName: microk8s-hostpath
   volumeMode: Filesystem

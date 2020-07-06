@@ -11,5 +11,5 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: pgadmin-service
+              serviceName: pgadmin-cluster-ip-service
               servicePort: http
