@@ -56,9 +56,9 @@ data:
   AIRFLOW__KUBERNETES__DAGS_VOLUME_CLAIM: "{{ include "airflow.fullname" . }}"
   {{- end }}
   {{- if (not .Values.airflow.config.AIRFLOW__KUBERNETES__DAGS_IN_IMAGE) }}
-  AIRFLOW__KUBERNETES__DAGS_IN_IMAGE: "python:3.8.3"
+  AIRFLOW__KUBERNETES__DAGS_IN_IMAGE: "False"
   {{- end }}
-  
+
   {{- end }}
 
   ## Airflow (Logs)
