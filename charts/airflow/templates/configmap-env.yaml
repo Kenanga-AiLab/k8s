@@ -58,7 +58,7 @@ data:
   {{- if (not .Values.airflow.config.AIRFLOW__KUBERNETES__DAGS_IN_IMAGE) }}
   AIRFLOW__KUBERNETES__DAGS_IN_IMAGE: "python:3.8.3"
   {{- end }}
-
+  
   {{- end }}
 
   ## Airflow (Logs)
