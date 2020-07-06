@@ -52,6 +52,13 @@ data:
   {{- if (not .Values.airflow.config.AIRFLOW__KUBERNETES__ENV_FROM_CONFIGMAP_REF) }}
   AIRFLOW__KUBERNETES__ENV_FROM_CONFIGMAP_REF: "{{ include "airflow.fullname" . }}-env"
   {{- end }}
+  {{- if (not .Values.airflow.config.AIRFLOW__KUBERNETES__DAGS_VOLUME_CLAIM) }}
+  AIRFLOW__KUBERNETES__ENV_FROM_CONFIGMAP_REF: "{{ include "airflow.fullname" . }}"
+  {{- end }}
+  {{- if (not .Values.airflow.config.AIRFLOW__KUBERNETES__DAGS_IN_IMAGE) }}
+  AIRFLOW__KUBERNETES__ENV_FROM_CONFIGMAP_REF: "python:3.8.3"
+  {{- end }}
+
   {{- end }}
 
   ## Airflow (Logs)
